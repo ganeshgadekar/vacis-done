@@ -6,6 +6,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import pageobjects.add_emp;
+import pageobjects.emp_info;
 import pageobjects.login;
 import utility.confo_uti;
 
@@ -28,6 +29,11 @@ public class testclass extends baseclass{
 	
 	add_emp ad=new add_emp(driver);
 	ad.click_emp();
-	ad.click_add();	
+	ad.click_add();
+	
+	emp_info info=new emp_info(driver);
+	info.enter_name("Riyan Parag");
+	info.enter_email("riyan@gmail.com");
+	
 	}
 }
